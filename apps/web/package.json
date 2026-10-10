@@ -1,0 +1,9 @@
+{
+  "name": "@enertally/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@enertally/core": "workspace:*"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "enertally",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.3.14",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun apps/web/serve.ts",
+    "build": "bun scripts/build.ts && bun scripts/build-cli.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "check": "bun run typecheck && bun test && bun run build && bun scripts/verify-public.ts",
+    "cli": "bun apps/cli/src/index.ts",
+    "build:cli": "bun scripts/build-cli.ts",
+    "test:cli": "bun test apps/cli"
+  },
+  "devDependencies": {
+    "@types/bun": "1.3.14",
+    "typescript": "~5.9.3"
+  }
+}
